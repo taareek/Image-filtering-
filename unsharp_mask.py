@@ -40,7 +40,7 @@ ax1.title.set_text("(gaussian blured image - original image) * 2")
 
 ax1 = fig.add_subplot(2,2,4)
 ax1.imshow(unsharp_img, cmap= 'gray')
-ax1.title.set_text("Unsharp image")
+ax1.title.set_text("unharp= original + amount * (original - blurred)")
 
 plt.show()
 
