@@ -14,7 +14,7 @@ rgb_img = cv2.cvtColor(img_file, cv2.COLOR_BGR2RGB)
 # converting to image to LAB color space so CLAHE can be applied to luminance
 lab_img = cv2.cvtColor(img_file, cv2.COLOR_BGR2LAB)
 
-fig = plt.figure(figsize=(12,10))
+fig = plt.figure(figsize=(8,8))
 
 ax1= fig.add_subplot(1, 3, 1)
 ax1.imshow(img_file)
@@ -34,7 +34,7 @@ plt.show()
 # splitting LAB image into l,a, b channel
 l,a,b = cv2.split(lab_img)
 
-fig = plt.figure(figsize=(12,12))
+fig = plt.figure(figsize=(8,8))
 
 ax1= fig.add_subplot(1, 3, 1)
 ax1.imshow(l)
@@ -52,7 +52,7 @@ fig.suptitle('Three channel of LAB image ', fontsize=16)
 plt.show()
 
 # plotting histogram of LAB images
-fig = plt.figure(figsize=(12,10))
+fig = plt.figure(figsize=(8,8))
 
 ax1= fig.add_subplot(1, 3, 1)
 ax1.hist(l.flat, bins= 100, range=(0,255))
